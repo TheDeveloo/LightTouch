@@ -1,0 +1,163 @@
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@color/black"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin"
+	    tools:context=".MainActivity" >
+
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|center_horizontal">
+	        
+	        <Button
+		        android:id="@+id/button1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:background="@drawable/iobutton" />
+	    </RelativeLayout>
+
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|center_horizontal">
+	        
+		    <TextView
+		        android:id="@+id/error"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@color/darkgrey"
+		        android:layout_marginTop="107dp"
+		        android:minHeight="50dp"
+		        android:minWidth="200dp" />
+		</RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true" >
+	        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp" >
+		
+		    <TextView
+		        android:id="@+id/textBattery"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/battery_text"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="@color/darkgrey" />
+
+		    <TextView
+		        android:id="@+id/batteryValue"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="@color/darkgrey" />
+        </RelativeLayout>
+    
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+		    <Switch
+		        android:id="@+id/switchInvert"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:textOff="@string/off"
+		        android:textOn="@string/on" />
+		
+		    <TextView
+		        android:id="@+id/textInvert"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/text_invert"
+		        android:layout_alignBaseline="@id/switchInvert"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="@color/darkgrey" />
+		</RelativeLayout>
+    
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+		    <Switch
+		        android:id="@+id/switchLock"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:textOff="@string/off"
+		        android:textOn="@string/on" />
+
+		    <TextView
+		        android:id="@+id/textLock"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/text_lock"
+		        android:layout_alignBaseline="@id/switchLock"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="@color/darkgrey" />
+        </RelativeLayout>
+    
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            
+            <Switch
+		        android:id="@+id/switchStrombo"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:textOff="@string/off"
+		        android:textOn="@string/on" />
+
+		    <TextView
+		        android:id="@+id/textStrombo"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/strombo_title"
+		        android:layout_alignBaseline="@id/switchStrombo"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="@color/darkgrey" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+		    <TextView
+		        android:id="@+id/textFrequency"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/strombo_frequency"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="@color/darkgrey" />
+		
+		    <TextView
+		        android:id="@+id/valueFrequency"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginRight="2dp"
+		        android:layout_alignParentRight="true"
+		        android:text="@string/default_frequency_val"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="@color/darkgrey" />
+        </RelativeLayout>
+        
+	    <SeekBar
+	        android:id="@+id/frequency"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:max="100" />
+    </LinearLayout>
+</RelativeLayout>
