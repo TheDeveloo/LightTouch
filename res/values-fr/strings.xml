@@ -5,7 +5,7 @@
     <string name="action_settings">Paramètres</string>
     <string name="hello_world">OFF</string>
     <string name="button_text">I/O</string>
-    <string name="strombo_title">Stromboscope :</string>
+    <string name="strombo_title">Stroboscope :</string>
     <string name="strombo_frequency">Fréquence :</string>
     <string name="text_lock">Mode interrupteur :</string>
     <string name="default_frequency_val">1 Hz</string>

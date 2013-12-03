@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LightTouch</string>
+    <string name="action_settings">Impostazioni</string>
+    <string name="hello_world">OFF</string>
+    <string name="button_text">I/O</string>
+    <string name="strombo_title">Stroboscopio :</string>
+    <string name="strombo_frequency">Frequenza :</string>
+    <string name="text_lock">Interruttore modo :</string>
+    <string name="default_frequency_val">1 Hz</string>
+    <string name="battery_text">Batteria :</string>
+    <string name="text_invert">Luce inversione :</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+
+</resources>
