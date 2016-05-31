@@ -21,6 +21,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.view.Menu;
@@ -58,7 +59,9 @@ public class MainActivity extends Activity {
         
         // Hide title bar (notifications bar)
         ActionBar actionBar = getActionBar();
-        actionBar.hide();
+		if(actionBar != null) {
+			actionBar.hide();
+		}
         
         // Keep screen on
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -82,7 +85,7 @@ public class MainActivity extends Activity {
 					boolean fromUser) {
 				if(progress == 0)
 					progress++;
-				((TextView)findViewById(R.id.valueFrequency)).setText(progress + " Hz");
+				((TextView)findViewById(R.id.valueFrequency)).setText(String.format("%d Hz", progress));
 			}
 		});
 
@@ -144,9 +147,9 @@ public class MainActivity extends Activity {
 	            }
 	        });
         }else{
-        	((TextView) findViewById(R.id.error)).setText("NO FLASH LIGHT AVAILABLE");
+        	((TextView) findViewById(R.id.error)).setText(getResources().getString(R.string.missing_flashlight));
         	// Hiding light button
-        	findViewById(R.id.button1).setVisibility(4);
+        	findViewById(R.id.button1).setVisibility(View.GONE);
         }
     }
 

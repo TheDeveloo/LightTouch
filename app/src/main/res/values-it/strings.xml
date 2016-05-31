@@ -13,5 +13,6 @@
     <string name="text_invert">Luce inversione :</string>
     <string name="on">ON</string>
     <string name="off">OFF</string>
+    <string name="missing_flashlight">NO FLASH DISPONIBILE</string>
 
 </resources>
