@@ -33,6 +33,7 @@ public class CameraManager {
 	    param_off = cam.getParameters();
 	    param_on = cam.getParameters();
 	    param_on.setFlashMode(Parameters.FLASH_MODE_TORCH);
+		param_off.setFlashMode(Parameters.FLASH_MODE_OFF);
 		strombo = new Stromboscope(this,frequency);
 	}
 	
@@ -97,9 +98,11 @@ public class CameraManager {
     	{
         	// Camera flash on
         	cam.setParameters(param_on);
-    	}else{
+			cam.startPreview();
+		}else{
         	// Camera flash off
         	cam.setParameters(param_off);
+			cam.stopPreview();
     	}
     }
     

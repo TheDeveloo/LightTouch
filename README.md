@@ -3,4 +3,4 @@ LightTouch
 
 Light painting android application
 
-Eclipse project
+Android Studio project
